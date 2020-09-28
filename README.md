@@ -16,8 +16,8 @@
 ```
   async function start() {
       try {
-          await that.connection.start()
-          this.initevent()
+          await connection.start()
+          initevent()
       } catch (err) {
           setTimeout(start, 5000);
       }
@@ -30,11 +30,10 @@
     connection.onclose((res: any) => {
           console.log("signalr 已关闭！");
     });
-    this.connection.onreconnected((res: any) => {
+    connection.onreconnected((res: any) => {
         console.log("signalr 重新链接");
     });
-    // SendUser("用户id",“消息内容json对象，跟以前一样的”)
-    this.connection.on("ReceiveMessage", ( message: any) => {   
+    connection.on("ReceiveMessage", ( message: any) => {   
          console.log('signalr 收到消息:', message)
     });
   }
