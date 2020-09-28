@@ -1,7 +1,7 @@
 # signalR-wx
 修改后的signalR.js 3.  微信小程序可以直接使用  使用方法与官方一致。
-##示例 示例比较生硬，毕竟使用的话还是要去看官网文档最好。
-###1、创建
+## 示例 示例比较生硬，毕竟使用的话还是要去看官网文档最好。
+### 1、创建
 ```
   const signalr = require("./signalr/index");
   let connection = new signalr.HubConnectionBuilder()
@@ -12,7 +12,7 @@
     .configureLogging(signalr.LogLevel.Information)
     .build();
 ```
-###2、开启链接
+### 2、开启链接
 ```
   async function start() {
       try {
@@ -24,7 +24,7 @@
   }
   start();
 ```
-###3，都是官方的写法，这里的内容官方文档更加详细
+### 3，都是官方的写法，这里的内容官方文档更加详细
 ```
   const initevent = () => {
     connection.onclose((res: any) => {
